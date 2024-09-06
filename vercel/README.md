@@ -21,7 +21,7 @@ func main() {
   deployment, err := vercel.CreateAndDeploy("<vercel token>", map[string]string{
 	"package.json": "<package.json contents...>",
 	"package-lock.json": "<package-lock.json contents...>",
-	"some/path/to/page.ts": "<some/path/to/index.ts contents...>",
+	"some/path/to/page.ts": "<some/path/to/page.ts contents...>",
   })
   if err != nil {
     panic(err)
