@@ -30,3 +30,5 @@ func main() {
   fmt.Printf("App is deployed to: %s\n", deployment.URL)
 }
 ```
+
+The way it works is by creating a new project then creating a deployment to go along with it. At the moment nothing is being done to re-use prior deployments cause I think it's funnier that way
