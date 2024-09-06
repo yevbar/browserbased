@@ -1,0 +1,3 @@
+package cobol
+
+func Parse() {}
