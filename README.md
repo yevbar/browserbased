@@ -2,6 +2,10 @@
 
 Like [serverless](https://www.serverless.com/) but for headless browsers
 
+## Inspiration
+
+["Try running one on a lambda, I dare you"](https://www.youtube.com/watch?v=us_vS2EVDOA&t=46s)
+
 ## Configuring
 
 Prior to running, you'll need to have a `VERCEL_TOKEN` environment variable set up with an access token which you can obtain [here](https://vercel.com/account/settings/tokens)
@@ -24,10 +28,18 @@ If you do not want to install make on your machine, this is the command it's act
 $ go build -o browserless-bin main.go
 ```
 
-Which compiles the code at [main.go]() and creates the executable that you can either run locally or put somewhere in your `PATH`
+Which compiles the code at [main.go](https://github.com/yevbar/browserless/blob/master/main.go) and creates the executable that you can either run locally or put somewhere in your `PATH`. Suppose you wanted to make a browserless browser go to Wikipedia, you can do that with the following COBOL
+
+```
+-- cobol/examples/wikipedia.cobol
+
+NAVIGATE TO https://en.wikipedia.org/wiki/Project_Xanadu
+```
+
+Here's what it looks like to run the executable locally
 
 ```bash
-$ ./browserless-bin cobol/examples/wikipedia.cobol 
+$ ./browserless-bin cobol/examples/wikipedia.cobol
 Deploying a browserless browser!
 Deployed to: https://<stuff>.vercel.app
 To access the browser go to https://<stuff>.vercel.app/api

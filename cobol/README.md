@@ -50,8 +50,9 @@ NAVIGATE TO https://google.com --also a comment
 
 These are some of the ones I was able to get working (if it doesn't work on the first request, try invoking the `/api` endpoint once to warm up the function then requesting a 2nd time.
 
-- NIST summary
-- arxiv
-- wikipedia
+- [NIST abstracts](https://github.com/yevbar/browserless/blob/master/cobol/examples/nist.cobol)
+- [arxiv](https://github.com/yevbar/browserless/blob/master/cobol/examples/arxiv.cobol)
+- [Wikipedia](https://github.com/yevbar/browserless/blob/master/cobol/examples/wikipedia.cobol)
+- [Hacker News](https://github.com/yevbar/browserless/blob/master/cobol/examples/example.cobol)
 
 You can see the examples folder of scripts I was working on and some of them may actually work on a paid Vercel plan. Leaving for others to toy with
