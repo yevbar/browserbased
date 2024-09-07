@@ -36,8 +36,10 @@ To access the browser go to https://<stuff>.vercel.app/api
 And, if you'd like to see a full script building, adding to `PATH`, and then running on a provided file
 
 ```bash
-$ make build
-$ sudo mv browserless-bin /usr/local/bin/browserless
+$ git clone https://github.com/yevbar/browserless
+$ cd browserless
+$ make build # Or the go build command
+$ sudo mv browserless-bin /usr/local/bin/browserless # Or some other folder listed when you run [echo "$PATH"] in your terminal
 $ browserless cobol/examples/wikipedia.cobol
 ```
 
