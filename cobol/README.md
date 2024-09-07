@@ -48,7 +48,7 @@ NAVIGATE TO https://google.com --also a comment
 
 ## Known working examples (free tier)
 
-These are some of the ones I was able to get working (if it doesn't work on the first request, try invoking the `/api` endpoint once to warm up the function then requesting a 2nd time.
+These are some of the ones I was able to get working (if it doesn't work on the first request, try invoking the `/api` endpoint once to warm up the function then requesting a 2nd time)
 
 - [NIST abstracts](https://github.com/yevbar/browserless/blob/master/cobol/examples/nist.cobol)
 - [arxiv](https://github.com/yevbar/browserless/blob/master/cobol/examples/arxiv.cobol)
