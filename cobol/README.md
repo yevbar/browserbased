@@ -55,4 +55,4 @@ These are some of the ones I was able to get working (if it doesn't work on the 
 - [Wikipedia](https://github.com/yevbar/browserless/blob/master/cobol/examples/wikipedia.cobol)
 - [Hacker News](https://github.com/yevbar/browserless/blob/master/cobol/examples/example.cobol)
 
-You can see the examples folder of scripts I was working on and some of them may actually work on a paid Vercel plan. Leaving for others to toy with
+You can see the <a href="https://github.com/yevbar/browserless/tree/master/cobol/examples">examples folder</a> of scripts I was working on and some of them may actually work on a paid Vercel plan. Leaving for others to toy with
