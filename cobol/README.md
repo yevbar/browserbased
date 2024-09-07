@@ -6,7 +6,7 @@ If you've ever thought writing programs involving headless browsers were tedious
 
 ## How does it work?
 
-[Click here if you'd rather look at code examples](#examples)
+[Click here if you'd rather look at code examples](#known-working-examples-free-tier)
 
 To understand the failure tolerance of COBOL, it may be helpful to look at the following topics from this lens:
 
