@@ -2,6 +2,60 @@
 
 If you've wanted to inexpensively run numerous headless browsers, here's how you can do that
 
+## Control browsers using COBOL
+
+If you'd like to run a [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md) script instead of manipulating an existing Puppeteer one without using the [CLI](https://github.com/yevbar/browserless/blob/master/README.md#building) here's how you can do that
+
+```golang
+// main.go
+
+import (
+  "github.com/yevbar/browserless/browserless"
+)
+
+func main() {
+  browser, err := browserless.CreateBrowserlessBrowser(&browserless.BrowserlessBrowserConfig{
+    COBOLScript: "NAVIGATE TO https://news.ycombinator.com",
+  }
+  if err != nil {
+    panic(err)
+  }
+
+  fmt.Printf("Deployed to: %s\nTo access the browser go to %s\n", browser.DeployedURL, browser.BrowserURL)
+}
+```
+
+## Control browsers using a COBOL script
+
+Reading from a file can be done easily with `os`
+
+```golang
+// main.go
+
+import (
+  "os"
+
+  "github.com/yevbar/browserless/browserless"
+)
+
+func main() {
+  cobolFilepath := "path/to/file.cobol"
+  cobol, err := os.ReadFile(cobolFilepath)
+  if err != nil {
+    panic(err)
+  }
+
+  browser, err := browserless.CreateBrowserlessBrowser(&browserless.BrowserlessBrowserConfig{
+    COBOLScript: string(cobol),
+  }
+  if err != nil {
+    panic(err)
+  }
+
+  fmt.Printf("Deployed to: %s\nTo access the browser go to %s\n", browser.DeployedURL, browser.BrowserURL)
+}
+```
+
 ## Taking a screenshot
 
 The [example script](https://github.com/yevbar/browserless/blob/master/browserless/example.go) in the source code navigates to `https://example.com` and takes a screenshot of the page, here's the source code of the browser related stuff

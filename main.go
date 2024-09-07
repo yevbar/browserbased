@@ -24,7 +24,7 @@ func DeployFromFile(COBOLScriptPath string) *browserless.BrowserlessBrowser {
 		panic(err)
 	}
 
-	fmt.Printf("Deployed to: %s\nTo access the browser go to %s\n", browser.DeployedURL, browser.BrowserURL)	
+	fmt.Printf("Deployed to: %s\nTo access the browser go to %s\n", browser.DeployedURL, browser.BrowserURL)
 
 	return browser
 }
