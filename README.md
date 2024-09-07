@@ -24,7 +24,7 @@ If you do not want to install make on your machine, this is the command it's act
 $ go build -o browserless-bin main.go
 ```
 
-Which compiles the code at [main.go](https://github.com/yevbar/browserless/blob/master/main.go) and creates the executable that you can either run locally or put somewhere in your `PATH`. Suppose you wanted to make a browserless browser go to Wikipedia, you can do that with the following COBOL
+Which compiles the code at [main.go](https://github.com/yevbar/browserless/blob/master/main.go) and creates the executable that you can either run locally or put somewhere in your `PATH`. Suppose you wanted to make a browserless browser [go to Wikipedia](https://github.com/yevbar/browserless/blob/master/cobol/examples/wikipedia.cobol), you can do that with the following [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md)
 
 ```
 -- cobol/examples/wikipedia.cobol
