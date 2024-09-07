@@ -1,0 +1,1 @@
+NAVIGATE TO https://www.33across.com/news/

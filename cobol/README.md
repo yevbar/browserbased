@@ -8,6 +8,12 @@ If you've ever thought writing programs involving headless browsers were tedious
 
 [Click here if you'd rather look at code examples](#examples)
 
+To understand the failure tolerance of COBOL, it may be helpful to look at the following topics from this lens:
+
+* [Garbage collection](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) is an abstraction over memory management
+* [Haxl](https://www.youtube.com/watch?v=sT6VJkkhy0o) is an abstraction over concurrency
+* **COBOL** is an abstraction over stupidity
+
 COBOL can be understood as an instruction language like something you'd see in a computer architecture class but for controlling a web browser. Here's an example script for going to Google, entering a query into the search bar, then clicking on the button to invoke a search request:
 
 ```
@@ -25,8 +31,27 @@ ENTER INTO input#search-box "your query"
 CLICK ON button.cta
 ```
 
-## Examples
+In cases where a line does not match the desired grammar (as in the first two words in the first line below don't correctly match the correct grammar as shown in the one following it)
 
 ```
+ENTER IN input#search-box "your query" -- 2nd word after ENTER must be INTO so this line does nothing
+ENTER INTO input#search-box "your query" -- Actually works as intended
+```
+
+As you may have figured out by now, comments are done via double dash following a whitespace
 
 ```
+NAVIGATE TO https://google.com--not a comment
+NAVIGATE TO https://google.com -- is a comment
+NAVIGATE TO https://google.com --also a comment
+```
+
+## Known working examples (free tier)
+
+These are some of the ones I was able to get working (if it doesn't work on the first request, try invoking the `/api` endpoint once to warm up the function then requesting a 2nd time.
+
+- NIST summary
+- arxiv
+- wikipedia
+
+You can see the examples folder of scripts I was working on and some of them may actually work on a paid Vercel plan. Leaving for others to toy with

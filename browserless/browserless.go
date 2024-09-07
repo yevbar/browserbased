@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/yevbar/browserless/browsers"
+	"github.com/yevbar/browserless/cobol"
 )
 
 type BrowserlessBrowser struct {
@@ -14,10 +15,14 @@ type BrowserlessBrowser struct {
 
 type BrowserlessBrowserConfig struct {
 	PuppeteerScript string
+	COBOLScript string
 }
 
 func CreateBrowserlessBrowser(config *BrowserlessBrowserConfig) (*BrowserlessBrowser, error) {
 	puppeterSource := config.PuppeteerScript
+	if len(config.COBOLScript) > 0 {
+		puppeterSource = cobol.COBOLToPuppeteer(config.COBOLScript)
+	}
 	if len(puppeterSource) == 0 {
 		puppeterSource = ExamplePuppeteerScript()
 	}

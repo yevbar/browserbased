@@ -867,3 +867,5 @@ const PACKAGE_JSON = `{
   }
 }
 `
+
+const INDEX_HTML = `<a href="/api">Click me</a>`
