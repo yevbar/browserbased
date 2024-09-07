@@ -60,7 +60,7 @@ $ browserless cobol/examples/wikipedia.cobol
 
 ## Limitations
 
-This does not offer any stealth or anti-anti-scraping capabilities and is as good as you can make your Puppeteer scripts
+This does not offer any stealth or anti-anti-scraping capabilities and is as good as you can make your COBOL/Puppeteer scripts
 
 ## Inspiration
 
