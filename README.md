@@ -2,6 +2,8 @@
 
 Like [serverless](https://www.serverless.com/) but for headless browsers
 
+At the time of writing this, here's an example output from the wikipedia example below [https://project1725750744.vercel.app/api](https://project1725750744.vercel.app/api)
+
 ## Configuring
 
 Prior to running, you'll need to have a `VERCEL_TOKEN` environment variable set up with an access token which you can obtain [here](https://vercel.com/account/settings/tokens)
