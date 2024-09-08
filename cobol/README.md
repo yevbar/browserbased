@@ -37,6 +37,8 @@ You can see the <a href="https://github.com/yevbar/browserless/tree/master/cobol
 
 ## Syntax
 
+COBOL is newline-sensitive and doesn't care how you indent commands so long as each line accomplishes a single instruction. The goal of COBOL is to succinctly convey browser actions not code golf browsing.
+
 ### Keywords
 
 At the moment you can specify a browser to do the following
