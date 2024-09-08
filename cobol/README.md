@@ -57,6 +57,8 @@ ENTER IN input#search-box "your query" -- 2nd word after ENTER must be INTO so t
 ENTER INTO input#search-box "your query" -- Actually works as intended
 ```
 
+Malformed COBOL lines are treated similar to [NOTHING](#nothing) and simply are ignored
+
 ### NOTHING
 
 As a mid-sentence exit valve, the language also features a `NOTHING` keyword in case you were to generate a line that doesn't make sense
