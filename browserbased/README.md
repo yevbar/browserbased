@@ -75,8 +75,10 @@ Then you can write a file like so
 
 ```golang
 // main.go
+package main
 
 import (
+  "fmt"
   "github.com/yevbar/browserbased/browserbased"
 )
 
@@ -104,8 +106,10 @@ Reading from a COBOL file can be done easily with `os`
 
 ```golang
 // main.go
+package main
 
 import (
+  "fmt"
   "os"
 
   "github.com/yevbar/browserbased/browserbased"
