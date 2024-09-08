@@ -62,6 +62,14 @@ $ browserless cobol/examples/wikipedia.cobol
 
 If you'd like to run a [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md) script instead of manipulating an existing Puppeteer one without using the [CLI](https://github.com/yevbar/browserless/blob/master/README.md#building) here's how you can do that
 
+First, install the dependency
+
+```bash
+$ go get github.com/yevbar/browserless/browserless
+```
+
+Then you can write a file like so
+
 ```golang
 // main.go
 
@@ -83,7 +91,13 @@ func main() {
 
 ## Control browsers using a COBOL script
 
-Reading from a file can be done easily with `os`
+First, install the dependency
+
+```bash
+$ go get github.com/yevbar/browserless/browserless
+```
+
+Reading from a COBOL file can be done easily with `os`
 
 ```golang
 // main.go
