@@ -56,6 +56,9 @@ $ cd browserless
 $ make build # Or the go build command
 $ sudo mv browserless-bin /usr/local/bin/browserless # Or some other folder listed when you run [echo "$PATH"] in your terminal
 $ browserless cobol/examples/wikipedia.cobol
+Deploying a browserless browser!
+Deployed to: https://<stuff>.vercel.app
+To access the browser go to https://<stuff>.vercel.app/api
 ```
 
 ## Control browsers using COBOL
