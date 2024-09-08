@@ -2,6 +2,14 @@
 
 If you've wanted to inexpensively run numerous headless browsers, here's how you can do that
 
+* [Deploy serverless browsers using CLI](#deploy-serverless-browsers-using-cli)
+  * [Building](#building)
+  * [Running](#running)
+* [Control browsers using COBOL](#deploy-serverless-browsers-using-cli)
+* [Control browsers using a COBOL script](#deploy-serverless-browsers-using-cli)
+* [Taking a screenshot](#taking-a-screenshot)
+* [Customizing the browser logic](#customizing-the-browser-logic)
+
 ## Deploy serverless browsers using CLI
 
 ### Building
