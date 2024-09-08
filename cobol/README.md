@@ -24,30 +24,6 @@ ENTER INTO input#search-box "your query"
 CLICK ON button.cta
 ```
 
-As a mid-sentence exit valve, the language also features a `NOTHING` keyword in case you were to generate a line that doesn't make sense
-
-```
-NAVIGATE TO https://google.com
-CLICK ON NOTHING -- Was written too soon
-ENTER INTO input#search-box "your query"
-CLICK ON button.cta
-```
-
-In cases where a line does not match the desired grammar (as in the first two words in the first line below don't correctly match the correct grammar as shown in the one following it)
-
-```
-ENTER IN input#search-box "your query" -- 2nd word after ENTER must be INTO so this line does nothing
-ENTER INTO input#search-box "your query" -- Actually works as intended
-```
-
-As you may have figured out by now, comments are done via double dash following a whitespace
-
-```
-NAVIGATE TO https://google.com--not a comment
-NAVIGATE TO https://google.com -- is a comment
-NAVIGATE TO https://google.com --also a comment
-```
-
 ## Known working examples (free tier)
 
 These are some of the ones I was able to get working (if it doesn't work on the first request, try invoking the `/api` endpoint once to warm up the function then requesting a 2nd time)
@@ -58,3 +34,46 @@ These are some of the ones I was able to get working (if it doesn't work on the 
 - [Hacker News](https://github.com/yevbar/browserless/blob/master/cobol/examples/example.cobol)
 
 You can see the <a href="https://github.com/yevbar/browserless/tree/master/cobol/examples">examples folder</a> of scripts I was working on and some of them may actually work on a paid Vercel plan. Leaving for others to toy with
+
+## Syntax
+
+### Keywords
+
+At the moment you can specify a browser to do the following
+
+```
+NAVIGATE TO <url>
+CLICK ON <selector>
+ENTER INTO <selector> "<text>"
+```
+
+The above keyword commands must have both words be correct
+
+```
+NAVIGATE TO https://example.com -- Actually works
+NAVIGATE TOWARD https://example.com -- Nah
+
+ENTER IN input#search-box "your query" -- 2nd word after ENTER must be INTO so this line does nothing
+ENTER INTO input#search-box "your query" -- Actually works as intended
+```
+
+### NOTHING
+
+As a mid-sentence exit valve, the language also features a `NOTHING` keyword in case you were to generate a line that doesn't make sense
+
+```
+NAVIGATE TO https://google.com
+CLICK ON NOTHING -- Was written too soon
+ENTER INTO input#search-box "your query"
+CLICK ON button.cta
+```
+
+### Comments
+
+Comments are done via double dash following a whitespace
+
+```
+NAVIGATE TO https://google.com--not a comment
+NAVIGATE TO https://google.com -- is a comment
+NAVIGATE TO https://google.com --also a comment
+```
