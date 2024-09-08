@@ -63,7 +63,7 @@ To access the browser go to https://<stuff>.vercel.app/api
 
 ## Control browsers using COBOL
 
-If you'd like to run a [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md) script instead of manipulating an existing Puppeteer one without using the [CLI](https://github.com/yevbar/browserless/blob/master/README.md#building) here's how you can do that
+If you'd like to run a [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md) script instead of manipulating an existing Puppeteer one without using the [CLI](#building) here's how you can do that
 
 First, install the dependency
 
