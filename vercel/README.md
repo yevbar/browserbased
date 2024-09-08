@@ -18,7 +18,7 @@ import (
 )
 
 func main() {
-  deployment, err := vercel.CreateAndDeploy("<vercel token>", map[string]string{
+  deployment, err := vercel.CreateAndDeploy("<vercel token>", map[string]string{ // object representing filesystem mapping filepath to contents
 	"package.json": "<package.json contents...>",
 	"package-lock.json": "<package-lock.json contents...>",
 	"some/path/to/page.ts": "<some/path/to/page.ts contents...>",
