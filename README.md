@@ -16,10 +16,10 @@ $ export VERCEL_TOKEN='abc123'
 
 ## Overview
 
-* If you're interested in spinning up serverless headless browsers, check out the [browserless module](https://github.com/yevbar/browserless/blob/master/browserless/README.md)
-* If you're interested in how it works, check out the [browser module](https://github.com/yevbar/browserless/blob/master/browsers/README.md)
-* If you're interested in an instruction language for browsers, check out [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md)
-* If you're interested in programatically deploying to Vercel using Golang, check out the [vercel module](https://github.com/yevbar/browserless/blob/master/vercel/README.md)
+* If you're interested in spinning up serverless headless browsers, check out the [browserless module](https://github.com/yevbar/browserless/blob/master/browserless/)
+* If you're interested in how it works, check out the [browser module](https://github.com/yevbar/browserless/blob/master/browsers/)
+* If you're interested in an instruction language for browsers, check out [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/)
+* If you're interested in programatically deploying to Vercel using Golang, check out the [vercel module](https://github.com/yevbar/browserless/blob/master/vercel/)
 
 ## Limitations
 
