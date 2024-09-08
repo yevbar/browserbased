@@ -4,6 +4,8 @@
 
 If you've ever thought writing programs involving headless browsers were tedious or verbose and wished there were a batteries-included framework that'd strip away some of the manual work, you've come to the right place.
 
+If you're interested in using COBOL rather than getting the conceptual digest, check out the [browserless module](https://github.com/yevbar/browserless/blob/master/browserless/README.md#control-browsers-using-cobol)
+
 ## How does it work?
 
 [Click here if you'd rather look at code examples](#known-working-examples-free-tier)
