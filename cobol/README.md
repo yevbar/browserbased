@@ -14,7 +14,7 @@ To understand the failure tolerance of COBOL, it may be helpful to look at the f
 
 * [Garbage collection](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) is an abstraction over memory management
 * [Haxl](https://www.youtube.com/watch?v=sT6VJkkhy0o) is an abstraction over concurrency
-* **COBOL** is an abstraction over stupidity
+* **NOTHING** is an abstraction over stupidity
 
 COBOL can be understood as an instruction language like something you'd see in a computer architecture class but for controlling a web browser. Here's an example script for going to Google, entering a query into the search bar, then clicking on the button to invoke a search request:
 
