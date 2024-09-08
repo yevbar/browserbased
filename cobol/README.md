@@ -1,5 +1,13 @@
 # COmmon Browser Oriented Language
 
+* [What is this?](#what-is-this)
+* [How does it work?](#how-does-it-work)
+* [Known working examples (free tier)](#known-working-examples-free-tier)
+* [Syntax](#syntax)
+  * [Keywords](#keywords)
+  * [NOTHING](#nothing)
+  * [Comments](#comments)
+
 ## What is this?
 
 If you've ever thought writing programs involving headless browsers were tedious or verbose and wished there were a batteries-included framework that'd strip away some of the manual work, you've come to the right place.
