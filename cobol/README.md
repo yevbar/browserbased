@@ -32,7 +32,7 @@ ENTER INTO input#search-box "your query"
 CLICK ON button.cta
 ```
 
-## Known working examples (free tier)
+## Known working examples (Vercel free tier)
 
 These are some of the ones I was able to get working (if it doesn't work on the first request, try invoking the `/api` endpoint once to warm up the function then requesting a 2nd time)
 
