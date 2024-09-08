@@ -122,7 +122,7 @@ func main() {
 }
 ```
 
-And here's what the `PupppeteerScript` value should look like
+The `PupppeteerScript` value should look like the following with your changes being applied to the lines highlighted below in the `GET` function
 
 ```diff
 import { NextRequest, NextResponse } from "next/server";
@@ -160,6 +160,6 @@ export async function GET(request: NextRequest) {
 -      "Content-Type": "application/pdf",
 -    },
 -  });
-+  // Your code here
++  // Your changes here
 }
 ```
