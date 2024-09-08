@@ -1,4 +1,4 @@
-module github.com/yevbar/browserless
+module github.com/yevbar/browserbased
 
 go 1.22.4
 

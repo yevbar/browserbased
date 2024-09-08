@@ -1,24 +1,24 @@
-package browserless
+package browserbased
 
 import (
 	"fmt"
 	"strings"
 
-	"github.com/yevbar/browserless/browsers"
-	"github.com/yevbar/browserless/cobol"
+	"github.com/yevbar/browserbased/browsers"
+	"github.com/yevbar/browserbased/cobol"
 )
 
-type BrowserlessBrowser struct {
+type BrowserbasedBrowser struct {
 	DeployedURL string // The deployed URL of the serverless function
 	BrowserURL string // The URL to access the browser
 }
 
-type BrowserlessBrowserConfig struct {
+type BrowserbasedBrowserConfig struct {
 	PuppeteerScript string
 	COBOLScript string
 }
 
-func CreateBrowserlessBrowser(config *BrowserlessBrowserConfig) (*BrowserlessBrowser, error) {
+func CreateBrowserbasedBrowser(config *BrowserbasedBrowserConfig) (*BrowserbasedBrowser, error) {
 	puppeterSource := config.PuppeteerScript
 	if len(config.COBOLScript) > 0 {
 		puppeterSource = cobol.COBOLToPuppeteer(config.COBOLScript)
@@ -32,7 +32,7 @@ func CreateBrowserlessBrowser(config *BrowserlessBrowserConfig) (*BrowserlessBro
 		deployedURL = fmt.Sprintf("https://%s", deployedURL)
 	}
 
-	return &BrowserlessBrowser{
+	return &BrowserbasedBrowser{
 		DeployedURL: deployedURL,
 		BrowserURL: fmt.Sprintf("%s/api", deployedURL),
 	}, nil

@@ -7,17 +7,17 @@ import (
 	"os"
 
 	"github.com/urfave/cli/v2"
-	"github.com/yevbar/browserless/browserless"
+	"github.com/yevbar/browserbased/browserbased"
 )
 
-func DeployFromFile(COBOLScriptPath string) *browserless.BrowserlessBrowser {
+func DeployFromFile(COBOLScriptPath string) *browserbased.BrowserbasedBrowser {
 	cobol, err := os.ReadFile(COBOLScriptPath)
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println("Deploying a browserless browser!")
-	browser, err := browserless.CreateBrowserlessBrowser(&browserless.BrowserlessBrowserConfig{
+	fmt.Println("Deploying a browserbased browser!")
+	browser, err := browserbased.CreateBrowserbasedBrowser(&browserbased.BrowserbasedBrowserConfig{
 		COBOLScript: string(cobol),
 	})
 	if err != nil {

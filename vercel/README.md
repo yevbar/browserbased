@@ -14,7 +14,7 @@ package main
 import (
   "fmt"
 
-  "github.com/yevbar/browserless/vercel"
+  "github.com/yevbar/browserbased/vercel"
 )
 
 func main() {

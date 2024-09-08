@@ -3,7 +3,7 @@ package browsers
 import (
 	"os"
 
-	"github.com/yevbar/browserless/vercel"
+	"github.com/yevbar/browserbased/vercel"
 )
 
 // Credit to this guy for figuring out how to get puppeteer working on Vercel in 2024

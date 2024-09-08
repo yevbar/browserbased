@@ -1,6 +1,6 @@
 # Browserbased
 
-At the time of writing this, here's an example output from the [wikipedia](https://github.com/yevbar/browserless/blob/master/cobol/examples/wikipedia.cobol) example [https://project1725750744.vercel.app/api](https://project1725750744.vercel.app/api)
+At the time of writing this, here's an example output from the [wikipedia](https://github.com/yevbar/browserbased/blob/master/cobol/examples/wikipedia.cobol) example [https://project1725750744.vercel.app/api](https://project1725750744.vercel.app/api)
 
 Think this is cool? Check out what we're building at [lsd.so](https://lsd.so)
 
@@ -14,10 +14,10 @@ $ export VERCEL_TOKEN='abc123'
 
 ## Overview
 
-* If you're interested in spinning up serverless headless browsers, check out the [browserless module](https://github.com/yevbar/browserless/blob/master/browserless/)
-* If you're interested in how it works, check out the [browser module](https://github.com/yevbar/browserless/blob/master/browsers/)
-* If you're interested in an instruction language for browsers, check out [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/)
-* If you're interested in programatically deploying to Vercel using Golang, check out the [vercel module](https://github.com/yevbar/browserless/blob/master/vercel/)
+* If you're interested in spinning up serverless headless browsers, check out the [browserbased module](https://github.com/yevbar/browserbased/blob/master/browserbased/)
+* If you're interested in how it works, check out the [browser module](https://github.com/yevbar/browserbased/blob/master/browsers/)
+* If you're interested in an instruction language for browsers, check out [COBOL](https://github.com/yevbar/browserbased/blob/master/cobol/)
+* If you're interested in programatically deploying to Vercel using Golang, check out the [vercel module](https://github.com/yevbar/browserbased/blob/master/vercel/)
 
 ## Limitations
 

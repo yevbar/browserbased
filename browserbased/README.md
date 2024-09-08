@@ -1,4 +1,4 @@
-# Browserless
+# Browserbased
 
 Like [serverless](https://www.serverless.com/) but for headless browsers. If you've wanted to inexpensively run numerous headless browsers, here's how you can do that
 
@@ -17,21 +17,21 @@ Like [serverless](https://www.serverless.com/) but for headless browsers. If you
 At the moment, you'll need to clone this repository and run the build script
 
 ```bash
-$ git clone https://github.com/yevbar/browserless
-$ cd browserless
+$ git clone https://github.com/yevbar/browserbased
+$ cd browserbased
 $ make build
-$ # Now you have ./browserless-bin
+$ # Now you have ./browserbased-bin
 ```
 
-If you do not want to install make on your machine, this is the command it's actually running to produce the `browserless-bin` file
+If you do not want to install make on your machine, this is the command it's actually running to produce the `browserbased-bin` file
 
 ```bash
-$ go build -o browserless-bin main.go
+$ go build -o browserbased-bin main.go
 ```
 
 ### Running
 
-Suppose you wanted to make a browserless browser [go to Wikipedia](https://github.com/yevbar/browserless/blob/master/cobol/examples/wikipedia.cobol), you can do that with the following [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md)
+Suppose you wanted to make a browserbased browser [go to Wikipedia](https://github.com/yevbar/browserbased/blob/master/cobol/examples/wikipedia.cobol), you can do that with the following [COBOL](https://github.com/yevbar/browserbased/blob/master/cobol/README.md)
 
 ```
 -- cobol/examples/wikipedia.cobol
@@ -42,8 +42,8 @@ NAVIGATE TO https://en.wikipedia.org/wiki/Project_Xanadu
 Here's what it looks like to run the executable locally
 
 ```bash
-$ ./browserless-bin cobol/examples/wikipedia.cobol
-Deploying a browserless browser!
+$ ./browserbased-bin cobol/examples/wikipedia.cobol
+Deploying a browserbased browser!
 Deployed to: https://<stuff>.vercel.app
 To access the browser go to https://<stuff>.vercel.app/api
 ```
@@ -51,24 +51,24 @@ To access the browser go to https://<stuff>.vercel.app/api
 And, if you'd like to see a full script building, adding to `PATH`, and then running on a provided file
 
 ```bash
-$ git clone https://github.com/yevbar/browserless
-$ cd browserless
+$ git clone https://github.com/yevbar/browserbased
+$ cd browserbased
 $ make build # Or the go build command
-$ sudo mv browserless-bin /usr/local/bin/browserless # Or some other folder listed when you run [echo "$PATH"] in your terminal
-$ browserless cobol/examples/wikipedia.cobol
-Deploying a browserless browser!
+$ sudo mv browserbased-bin /usr/local/bin/browserbased # Or some other folder listed when you run [echo "$PATH"] in your terminal
+$ browserbased cobol/examples/wikipedia.cobol
+Deploying a browserbased browser!
 Deployed to: https://<stuff>.vercel.app
 To access the browser go to https://<stuff>.vercel.app/api
 ```
 
 ## Control browsers using COBOL
 
-If you'd like to run a [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md) script instead of manipulating an existing Puppeteer one without using the [CLI](#building) here's how you can do that
+If you'd like to run a [COBOL](https://github.com/yevbar/browserbased/blob/master/cobol/README.md) script instead of manipulating an existing Puppeteer one without using the [CLI](#building) here's how you can do that
 
 First, install the dependency
 
 ```bash
-$ go get github.com/yevbar/browserless/browserless
+$ go get github.com/yevbar/browserbased/browserbased
 ```
 
 Then you can write a file like so
@@ -77,11 +77,11 @@ Then you can write a file like so
 // main.go
 
 import (
-  "github.com/yevbar/browserless/browserless"
+  "github.com/yevbar/browserbased/browserbased"
 )
 
 func main() {
-  browser, err := browserless.CreateBrowserlessBrowser(&browserless.BrowserlessBrowserConfig{
+  browser, err := browserbased.CreateBrowserbasedBrowser(&browserbased.BrowserbasedBrowserConfig{
     COBOLScript: "NAVIGATE TO https://news.ycombinator.com",
   }
   if err != nil {
@@ -97,7 +97,7 @@ func main() {
 First, install the dependency
 
 ```bash
-$ go get github.com/yevbar/browserless/browserless
+$ go get github.com/yevbar/browserbased/browserbased
 ```
 
 Reading from a COBOL file can be done easily with `os`
@@ -108,7 +108,7 @@ Reading from a COBOL file can be done easily with `os`
 import (
   "os"
 
-  "github.com/yevbar/browserless/browserless"
+  "github.com/yevbar/browserbased/browserbased"
 )
 
 func main() {
@@ -118,7 +118,7 @@ func main() {
     panic(err)
   }
 
-  browser, err := browserless.CreateBrowserlessBrowser(&browserless.BrowserlessBrowserConfig{
+  browser, err := browserbased.CreateBrowserbasedBrowser(&browserbased.BrowserbasedBrowserConfig{
     COBOLScript: string(cobol),
   }
   if err != nil {
@@ -131,7 +131,7 @@ func main() {
 
 ## Taking a screenshot
 
-The [example script](https://github.com/yevbar/browserless/blob/master/browserless/example.go) in the source code navigates to `https://example.com` and takes a screenshot of the page, here's the source code of the browser related stuff
+The [example script](https://github.com/yevbar/browserbased/blob/master/browserbased/example.go) in the source code navigates to `https://example.com` and takes a screenshot of the page, here's the source code of the browser related stuff
 
 ```javascript
 const browser = await getBrowser();
@@ -152,12 +152,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/yevbar/browserless/browserless"
+	"github.com/yevbar/browserbased/browserbased"
 )
 
 func main() {
-	fmt.Println("Deploying a browserless browser!")
-	browser, err := browserless.CreateBrowserlessBrowser(&browserless.BrowserlessBrowserConfig{})
+	fmt.Println("Deploying a browserbased browser!")
+	browser, err := browserbased.CreateBrowserbasedBrowser(&browserbased.BrowserbasedBrowserConfig{})
 	if err != nil {
 		panic(err)
 	}
@@ -168,7 +168,7 @@ func main() {
 
 ## Customizing the browser logic
 
-To provide a script of your own to deploy, simply provide a `PuppeteerScript` string to the config object provided to `CreateBrowserlessBrowser`
+To provide a script of your own to deploy, simply provide a `PuppeteerScript` string to the config object provided to `CreateBrowserbasedBrowser`
 
 ```diff
 // main.go
@@ -178,13 +178,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/yevbar/browserless/browserless"
+	"github.com/yevbar/browserbased/browserbased"
 )
 
 func main() {
-	fmt.Println("Deploying a browserless browser!")
--	browser, err := browserless.CreateBrowserlessBrowser(&browserless.BrowserlessBrowserConfig{})
-+	browser, err := browserless.CreateBrowserlessBrowser(&browserless.BrowserlessBrowserConfig{
+	fmt.Println("Deploying a browserbased browser!")
+-	browser, err := browserbased.CreateBrowserbasedBrowser(&browserbased.BrowserbasedBrowserConfig{})
++	browser, err := browserbased.CreateBrowserbasedBrowser(&browserbased.BrowserbasedBrowserConfig{
 +		PuppeteerScript: "...", // Example shown below
 +	})
 	if err != nil {

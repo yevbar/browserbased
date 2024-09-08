@@ -1,4 +1,4 @@
-package browserless
+package browserbased
 
 const PUPPETEER_SCRIPT = `
 import { NextRequest, NextResponse } from "next/server";

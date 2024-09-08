@@ -12,7 +12,7 @@
 
 If you've ever thought writing programs involving headless browsers were tedious or verbose and wished there were a batteries-included framework that'd strip away some of the manual work, you've come to the right place.
 
-If you're interested in using COBOL rather than getting the conceptual digest, check out the [browserless module](https://github.com/yevbar/browserless/blob/master/browserless/README.md#control-browsers-using-cobol)
+If you're interested in using COBOL rather than getting the conceptual digest, check out the [browserbased module](https://github.com/yevbar/browserbased/blob/master/browserbased/README.md#control-browsers-using-cobol)
 
 ## How does it work?
 
@@ -36,12 +36,12 @@ CLICK ON button.cta
 
 These are some of the ones I was able to get working (if it doesn't work on the first request, try invoking the `/api` endpoint once to warm up the function then requesting a 2nd time)
 
-- [NIST abstracts](https://github.com/yevbar/browserless/blob/master/cobol/examples/nist.cobol)
-- [arxiv](https://github.com/yevbar/browserless/blob/master/cobol/examples/arxiv.cobol)
-- [Wikipedia](https://github.com/yevbar/browserless/blob/master/cobol/examples/wikipedia.cobol)
-- [Hacker News](https://github.com/yevbar/browserless/blob/master/cobol/examples/example.cobol)
+- [NIST abstracts](https://github.com/yevbar/browserbased/blob/master/cobol/examples/nist.cobol)
+- [arxiv](https://github.com/yevbar/browserbased/blob/master/cobol/examples/arxiv.cobol)
+- [Wikipedia](https://github.com/yevbar/browserbased/blob/master/cobol/examples/wikipedia.cobol)
+- [Hacker News](https://github.com/yevbar/browserbased/blob/master/cobol/examples/example.cobol)
 
-You can see the <a href="https://github.com/yevbar/browserless/tree/master/cobol/examples">examples folder</a> of scripts I was working on and some of them may actually work on a paid Vercel plan. Leaving for others to toy with
+You can see the <a href="https://github.com/yevbar/browserbased/tree/master/cobol/examples">examples folder</a> of scripts I was working on and some of them may actually work on a paid Vercel plan. Leaving for others to toy with
 
 ## Syntax
 
