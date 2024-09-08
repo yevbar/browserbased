@@ -17,6 +17,8 @@ $ export VERCEL_TOKEN='abc123'
 If you're interested in the executable, at the moment, you'll need to clone this repository and run the build script
 
 ```bash
+$ git clone https://github.com/yevbar/browserless
+$ cd browserless
 $ make build
 ```
 
