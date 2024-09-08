@@ -1,6 +1,4 @@
-# Browserless
-
-Like [serverless](https://www.serverless.com/) but for headless browsers
+# Browserbased
 
 At the time of writing this, here's an example output from the [wikipedia](https://github.com/yevbar/browserless/blob/master/cobol/examples/wikipedia.cobol) example [https://project1725750744.vercel.app/api](https://project1725750744.vercel.app/api)
 

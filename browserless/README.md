@@ -1,6 +1,6 @@
 # Browserless
 
-If you've wanted to inexpensively run numerous headless browsers, here's how you can do that
+Like [serverless](https://www.serverless.com/) but for headless browsers. If you've wanted to inexpensively run numerous headless browsers, here's how you can do that
 
 * [Deploy serverless browsers using CLI](#deploy-serverless-browsers-using-cli)
   * [Building](#building)
