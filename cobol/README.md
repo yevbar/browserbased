@@ -70,6 +70,8 @@ ENTER INTO input#search-box "your query"
 CLICK ON button.cta
 ```
 
+When translating to Puppeteer, lines with `NOTHING` as the "target" are ignored like comments but with the intent of allowing possibly incorrect code to be provided
+
 ### Comments
 
 Comments are done via double dash following a whitespace
