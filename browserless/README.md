@@ -2,6 +2,54 @@
 
 If you've wanted to inexpensively run numerous headless browsers, here's how you can do that
 
+## Deploy serverless browsers using CLI
+
+### Building
+
+At the moment, you'll need to clone this repository and run the build script
+
+```bash
+$ git clone https://github.com/yevbar/browserless
+$ cd browserless
+$ make build
+$ # Now you have ./browserless-bin
+```
+
+If you do not want to install make on your machine, this is the command it's actually running to produce the `browserless-bin` file
+
+```bash
+$ go build -o browserless-bin main.go
+```
+
+### Running
+
+Suppose you wanted to make a browserless browser [go to Wikipedia](https://github.com/yevbar/browserless/blob/master/cobol/examples/wikipedia.cobol), you can do that with the following [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md)
+
+```
+-- cobol/examples/wikipedia.cobol
+
+NAVIGATE TO https://en.wikipedia.org/wiki/Project_Xanadu
+```
+
+Here's what it looks like to run the executable locally
+
+```bash
+$ ./browserless-bin cobol/examples/wikipedia.cobol
+Deploying a browserless browser!
+Deployed to: https://<stuff>.vercel.app
+To access the browser go to https://<stuff>.vercel.app/api
+```
+
+And, if you'd like to see a full script building, adding to `PATH`, and then running on a provided file
+
+```bash
+$ git clone https://github.com/yevbar/browserless
+$ cd browserless
+$ make build # Or the go build command
+$ sudo mv browserless-bin /usr/local/bin/browserless # Or some other folder listed when you run [echo "$PATH"] in your terminal
+$ browserless cobol/examples/wikipedia.cobol
+```
+
 ## Control browsers using COBOL
 
 If you'd like to run a [COBOL](https://github.com/yevbar/browserless/blob/master/cobol/README.md) script instead of manipulating an existing Puppeteer one without using the [CLI](https://github.com/yevbar/browserless/blob/master/README.md#building) here's how you can do that
