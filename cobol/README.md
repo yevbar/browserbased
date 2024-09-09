@@ -2,7 +2,7 @@
 
 * [What is this?](#what-is-this)
 * [How does it work?](#how-does-it-work)
-* [Known working examples (free tier)](#known-working-examples-free-tier)
+* [Known working examples (free tier)](#known-working-examples-vercel-free-tier)
 * [Syntax](#syntax)
   * [Keywords](#keywords)
   * [NOTHING](#nothing)
