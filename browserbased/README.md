@@ -85,7 +85,7 @@ import (
 func main() {
   browser, err := browserbased.CreateBrowserbasedBrowser(&browserbased.BrowserbasedBrowserConfig{
     COBOLScript: "NAVIGATE TO https://news.ycombinator.com",
-  }
+  })
   if err != nil {
     panic(err)
   }
