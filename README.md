@@ -2,6 +2,7 @@
 
 * [Overview](#overview)
 * [Configuring](#configuring)
+* [Contents](#contents)
 * [Limitations](#limitations)
 * [Inspiration](#inspiration)
 
@@ -21,7 +22,7 @@ Prior to running, you'll need to have a `VERCEL_TOKEN` environment variable set 
 $ export VERCEL_TOKEN='abc123'
 ```
 
-## Overview
+## Contents
 
 * If you're interested in spinning up serverless headless browsers, check out the [browserbased module](https://github.com/yevbar/browserbased/blob/master/browserbased/)
 * If you're interested in how it works, check out the [browser module](https://github.com/yevbar/browserbased/blob/master/browsers/)
