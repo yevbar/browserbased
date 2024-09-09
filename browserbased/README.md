@@ -130,7 +130,7 @@ func main() {
 
   browser, err := browserbased.CreateBrowserbasedBrowser(&browserbased.BrowserbasedBrowserConfig{
     COBOLScript: string(cobol),
-  }
+  })
   if err != nil {
     panic(err)
   }
