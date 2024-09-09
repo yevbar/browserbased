@@ -1,5 +1,12 @@
 # Browserbased
 
+* [Overview](#overview)
+* [Configuring](#configuring)
+* [Limitations](#limitations)
+* [Inspiration](#inspiration)
+
+## Overview
+
 Open-source serverless headless browsers
 
 At the time of writing this, here's an example output from the [wikipedia](https://github.com/yevbar/browserbased/blob/master/cobol/examples/wikipedia.cobol) example [https://project1725750744.vercel.app/api](https://project1725750744.vercel.app/api)
