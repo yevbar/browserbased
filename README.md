@@ -12,8 +12,6 @@ Open-source serverless headless browsers
 
 At the time of writing this, here's an example output from the [wikipedia](https://github.com/yevbar/browserbased/blob/master/cobol/examples/wikipedia.cobol) example [https://project1725750744.vercel.app/api](https://project1725750744.vercel.app/api)
 
-Think this is cool? Check out what we're building at [lsd.so](https://lsd.so)
-
 ## Configuring
 
 Prior to running, you'll need to have a `VERCEL_TOKEN` environment variable set up with an access token which you can obtain [here](https://vercel.com/account/settings/tokens)
