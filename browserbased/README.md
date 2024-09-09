@@ -94,6 +94,12 @@ func main() {
 }
 ```
 
+And run like so
+
+```bash
+$ go run main.go
+```
+
 ## Control browsers using a COBOL script
 
 First, install the dependency
