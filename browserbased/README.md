@@ -19,8 +19,7 @@ At the moment, you'll need to clone this repository and run the build script
 ```bash
 $ git clone https://github.com/yevbar/browserbased
 $ cd browserbased
-$ make build
-$ # Now you have ./browserbased-bin
+$ make build # Now you have ./browserbased-bin
 ```
 
 If you do not want to install make on your machine, this is the command it's actually running to produce the `browserbased-bin` file
