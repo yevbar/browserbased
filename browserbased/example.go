@@ -1,5 +1,6 @@
 package browserbased
 
+// A barebones Next.js function that navigates to example.com and takes a screenshot
 const PUPPETEER_SCRIPT = `
 import { NextRequest, NextResponse } from "next/server";
 import puppeteerCore from "puppeteer-core";
@@ -39,6 +40,7 @@ export async function GET(request: NextRequest) {
 }
 `
 
+// Returns a barebones Next.js function that navigates to example.com and takes a screenshot
 func ExamplePuppeteerScript() string {
 	return PUPPETEER_SCRIPT
 }
