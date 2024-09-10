@@ -11,6 +11,7 @@
 	* [ENTER](#enter)
 	* [BACK](#back)
 	* [NOTHING](#nothing)
+  * [Functions](#functions)
   * [Comments](#comments)
 
 ## What is this?
@@ -130,6 +131,22 @@ CLICK ON button.cta
 ```
 
 When translating to Puppeteer, lines with `NOTHING` as the "target" are ignored like comments but with the intent of allowing possibly incorrect code to be provided
+
+### Functions
+
+Functions are identified with colons and the function body is comprised of the lines that follow it. Function invocations are handled with `GOTO` statements with the `main` function being the entry point of the program
+
+```
+do_stuff:
+	NAVIGATE TO https://news.ycombinator.com
+	CLICK ON span.pagetop:nth-child(1) a:nth-child(2) -- Clicks on "New"
+	GO BACK -- Navigates back
+
+main:
+	GOTO do_stuff
+```
+
+Like Ruby/Python, you should assume a bleedover of context where scopes are effectively "flattened" when jumping from one function block to another
 
 ### Comments
 
