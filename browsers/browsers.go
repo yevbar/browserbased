@@ -14,7 +14,6 @@ func CreateFilesystemFromScript(puppeteerScript string) map[string]string {
 		"next.config.mjs": NEXT_CONFIG_MJS,
 		"package.json": PACKAGE_JSON,
 		"package-lock.json": PACKAGE_LOCK_JSON,
-		// "index.html": INDEX_HTML,
 	}
 
 	return fs

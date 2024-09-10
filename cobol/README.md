@@ -10,6 +10,7 @@
 	* [CLICK](#click)
 	* [ENTER](#enter)
 	* [BACK](#back)
+	* [HOVER](#hover)
 	* [NOTHING](#nothing)
   * [Functions](#functions)
   * [Comments](#comments)
@@ -118,6 +119,16 @@ GO BACK
 ```
 
 If just the expression `BACK` is provided or some other prior word than `GO`, it'll ignore the statement because of COBOL's [failure tolerance](#failure-tolerance). Under the hood it's Puppeteer's [goBack](https://pptr.dev/api/puppeteer.page.goback) method
+
+#### HOVER
+
+The `HOVER` instruction tells a browser to hover over some element, the syntax is as follows
+
+```
+HOVER OVER <selector>
+```
+
+The `<selector>` gets provided to Puppeteer's [hover](https://pptr.dev/api/puppeteer.page.hover) method
 
 #### NOTHING
 

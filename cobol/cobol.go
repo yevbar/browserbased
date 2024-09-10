@@ -130,6 +130,14 @@ page.on('request', request => (request.resourceType() === 'script') ? request.ab
 			return ""
 		}
 		return fmt.Sprintf("await %s();", split[1])
+	case "HOVER":
+		if len(split) == 1 {
+			return ""
+		}
+		if split[1] != "OVER" {
+			return ""
+		}
+		return fmt.Sprintf("await page.hover();", strings.Join(split[2:], " "))
 	default:
 		return ""
 	}
