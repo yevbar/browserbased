@@ -4,8 +4,13 @@
 * [How does it work?](#how-does-it-work)
 * [Known working examples (free tier)](#known-working-examples-vercel-free-tier)
 * [Syntax](#syntax)
+  * [Failure tolerance](#failure-tolerance)
   * [Keywords](#keywords)
-  * [NOTHING](#nothing)
+	* [NAVIGATE](#navigate)
+	* [CLICK](#click)
+	* [ENTER](#enter)
+	* [BACK](#back)
+	* [NOTHING](#nothing)
   * [Comments](#comments)
 
 ## What is this?
@@ -39,7 +44,7 @@ These are some of the ones I was able to get working (if it doesn't work on the 
 - [NIST abstracts](https://github.com/yevbar/browserbased/blob/master/cobol/examples/nist.cobol)
 - [arxiv](https://github.com/yevbar/browserbased/blob/master/cobol/examples/arxiv.cobol)
 - [Wikipedia](https://github.com/yevbar/browserbased/blob/master/cobol/examples/wikipedia.cobol)
-- [Hacker News](https://github.com/yevbar/browserbased/blob/master/cobol/examples/example.cobol)
+- [Hacker News](https://github.com/yevbar/browserbased/blob/master/cobol/examples/hackernews.cobol)
 
 You can see the <a href="https://github.com/yevbar/browserbased/tree/master/cobol/examples">examples folder</a> of scripts I was working on and some of them may actually work on a paid Vercel plan. Leaving for others to toy with
 
@@ -47,17 +52,9 @@ You can see the <a href="https://github.com/yevbar/browserbased/tree/master/cobo
 
 COBOL is newline-sensitive and doesn't care how you indent commands so long as each line accomplishes a single instruction. The goal of COBOL is to succinctly convey browser actions not code golf browsing.
 
-### Keywords
+### Failure tolerance
 
-At the moment you can specify a browser to do the following
-
-```
-NAVIGATE TO <url>
-CLICK ON <selector>
-ENTER INTO <selector> "<text>"
-```
-
-The above keyword commands must have both words be correct
+Keyword commands must have all words be correct
 
 ```
 NAVIGATE TO https://example.com -- Actually works
@@ -67,9 +64,61 @@ ENTER IN input#search-box "your query" -- 2nd word after ENTER must be INTO so t
 ENTER INTO input#search-box "your query" -- Actually works as intended
 ```
 
-Malformed COBOL lines are treated similar to [NOTHING](#nothing) and simply are ignored
+Malformed COBOL lines are treated similar to [NOTHING](#nothing) and are simply ignored
 
-### NOTHING
+### Keywords
+
+At the moment you can specify a browser to do stuff like the following
+
+```
+NAVIGATE TO <url>
+CLICK ON <selector>
+ENTER INTO <selector> "<text>"
+```
+
+Here are available keywords in COBOL
+
+#### NAVIGATE
+
+The `NAVIGATE` instruction tells a browser to navigate someplace, the syntax for this command is as follows
+
+```
+NAVIGATE TO <url>
+```
+
+The `<url>` gets provided to Puppeteer's [goto](https://pptr.dev/api/puppeteer.page.goto) method
+
+#### CLICK
+
+The `CLICK` instruction tells a browser to click on some element, the syntax is as follows
+
+```
+CLICK ON <selector>
+```
+
+The `<selector>` gets provided to Puppeteer's [click](https://pptr.dev/api/puppeteer.page.click) method
+
+#### ENTER
+
+The `ENTER` instruction tells a browser to enter some text into some element, the syntax is as follows
+
+```
+ENTER INTO <selector> "<text>"
+```
+
+The `<selector>` and `<text>` get provided to either Puppeteer's [type](https://pptr.dev/api/puppeteer.page.type) or [sendCharacter](https://pptr.dev/api/puppeteer.keyboard.sendcharacter) depending on whether the target element to type into is an input or textarea
+
+#### BACK
+
+The `BACK` instruction tells a browser to go back a page, the syntax is as follows
+
+```
+GO BACK
+```
+
+If just the expression `BACK` is provided or some other prior word than `GO`, it'll ignore the statement because of COBOL's [failure tolerance](#failure-tolerance)
+
+#### NOTHING
 
 As a mid-sentence exit valve, the language also features a `NOTHING` keyword in case you were to generate a line that doesn't make sense
 

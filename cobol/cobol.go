@@ -117,6 +117,14 @@ func COBOLLineToPuppeteer(line string) string {
 		}
 		return `await page.setRequestInterception(true);
 page.on('request', request => (request.resourceType() === 'script') ? request.abort() : request.continue());`
+	case "GO":
+		if len(split) == 1 {
+			return ""
+		}
+		if split[1] != "BACK" {
+			return ""
+		}
+		return `await page.goBack();`
 	default:
 		return ""
 	}
