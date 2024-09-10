@@ -116,7 +116,7 @@ The `BACK` instruction tells a browser to go back a page, the syntax is as follo
 GO BACK
 ```
 
-If just the expression `BACK` is provided or some other prior word than `GO`, it'll ignore the statement because of COBOL's [failure tolerance](#failure-tolerance)
+If just the expression `BACK` is provided or some other prior word than `GO`, it'll ignore the statement because of COBOL's [failure tolerance](#failure-tolerance). Under the hood it's Puppeteer's [goBack](https://pptr.dev/api/puppeteer.page.goback) method
 
 #### NOTHING
 
