@@ -124,7 +124,12 @@ page.on('request', request => (request.resourceType() === 'script') ? request.ab
 		if split[1] != "BACK" {
 			return ""
 		}
-		return `await page.goBack();`
+		return "await page.goBack();\n"
+	case "GOTO":
+		if len(split) == 1 {
+			return ""
+		}
+		return fmt.Sprintf("await %s();", split[1])
 	default:
 		return ""
 	}
@@ -152,7 +157,7 @@ func COBOLToPuppeteer(cobolScript string) string {
 		}
 
 		// Define function with block id as symbol and then COBOLToPuppeteer(blockDef) as body definition
-		result += fmt.Sprintf(`function %s() { %s }\n`, blockID, COBOLBlockToPuppeteer(blockDef))
+		result += fmt.Sprintf("async function %s() {\n%s\n}\n", blockID, COBOLBlockToPuppeteer(blockDef))
 	}
 
 	if mainDef, ok := blocks["main"]; ok {
