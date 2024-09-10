@@ -6,6 +6,9 @@ import puppeteerCore from "puppeteer-core";
 import puppeteer from "puppeteer";
 import chromium from "@sparticuz/chromium";
 
+chromium.setHeadlessMode = true
+chromium.setGraphicsMode = false
+
 export const dynamic = "force-dynamic";
 
 async function getBrowser() {
