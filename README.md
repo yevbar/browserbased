@@ -1,5 +1,7 @@
 # Browserbased
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/yevbar/browserbased.svg)](https://pkg.go.dev/github.com/yevbar/browserbased)
+
 * [Overview](#overview)
 * [Configuring](#configuring)
 * [Contents](#contents)
