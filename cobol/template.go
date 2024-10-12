@@ -32,12 +32,9 @@ export async function GET(request: NextRequest) {
   const browser = await getBrowser();
   const page = await browser.newPage();
 %s
-  const pdf = await page.pdf({format: 'A4', printBackground: true});
-  await browser.close();
-  return new NextResponse(pdf, {
-    headers: {
-      "Content-Type": "application/pdf",
-    },
-  });
+  const html = await page.evaluate(() => document.querySelector('*').outerHTML);
+  const response = new NextResponse(html);
+  response.headers.set('Content-Type', 'text/html; charset=utf-8');
+  return response;
 }
 `
