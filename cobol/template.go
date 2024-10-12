@@ -31,10 +31,22 @@ async function getBrowser() {
 export async function GET(request: NextRequest) {
   const browser = await getBrowser();
   const page = await browser.newPage();
+  await page.setRequestInterception(true);
+
+    page.on('request', (req) => {
+        if(req.resourceType() === 'image' || req.resourceType() === 'stylesheet' || req.resourceType() === 'font'){
+            req.abort();
+        } else {
+            req.continue();
+        }
+    })
 %s
-  const html = await page.evaluate(() => document.querySelector('*').outerHTML);
-  const response = new NextResponse(html);
-  response.headers.set('Content-Type', 'text/html; charset=utf-8');
-  return response;
+  const pdf = await page.pdf({format: 'A4', printBackground: true});
+  await browser.close();
+  return new NextResponse(pdf, {
+    headers: {
+      "Content-Type": "application/pdf",
+    },
+  });
 }
 `
